@@ -6,8 +6,9 @@
 <meta name="robots" content="noindex, nofollow">
 <title>motherswork · WeChat Mini Program</title>
 <style>
-:root{--red:#EE4A4F;--red-soft:#FDECEC;--price:#E23B3B;--teal:#2E7D72;--teal-soft:#E4F2EF;--pink:#F3D3D6;
---ink:#222;--grey:#8E8E93;--line:#EFEFEF;--bg:#F6F6F6;--wc-green:#95EC69;--wc-bg:#EDEDED;--wecom:#2C6BE0}
+:root{--red:#FE3A3E;--red-soft:#FFEDEE;--price:#E8232F;--teal:#FE3A3E;--teal-soft:#FFEDEE;--pink:#F6CACA;--pink-soft:#FFF2F2;
+--cara:#B07C50;--cara-dark:#8A5E36;--cara-soft:#F7EEE4;--cara-line:#D9B994;--navy:#262A3A;--search:#3C3C3C;
+--ink:#323233;--sub:#646566;--grey:#969799;--line:#EFEFEF;--bg:#F7F8FA;--wc-green:#95EC69;--wc-bg:#EDEDED;--wecom:#2C6BE0}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
 
 .phone{width:390px;height:844px;background:var(--bg);border-radius:44px;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 10px 40px rgba(0,0,0,.18)}
@@ -17,7 +18,7 @@
 .bars i:nth-child(1){height:4px}.bars i:nth-child(2){height:6px}.bars i:nth-child(3){height:9px}.bars i:nth-child(4){height:11px}
 .wifi{width:15px;height:11px;border:2.2px solid #111;border-radius:50% 50% 0 0;border-bottom:0}
 .batt{background:#111;color:#fff;font-size:10px;font-weight:700;border-radius:5px;padding:1px 5px}
-.nav{height:50px;flex:0 0 50px;background:#fff;display:flex;align-items:center;justify-content:center;position:relative;font-size:16px;font-weight:700;padding:0 104px;white-space:nowrap;overflow:hidden}
+.nav{height:50px;flex:0 0 50px;background:#fff;display:flex;align-items:center;justify-content:center;position:relative;font-size:16px;padding:0 104px;white-space:nowrap;overflow:hidden;font-weight:600}
 .cap{position:absolute;right:12px;top:9px;height:32px;width:88px;border:1px solid #E6E6E6;border-radius:16px;display:flex;align-items:center;background:#fff;font-size:12px}
 .cap span{flex:1;text-align:center;color:#111;font-weight:700}.cap i{width:1px;height:16px;background:#E3E3E3}
 .pill{position:absolute;left:12px;top:9px;height:32px;border:1px solid #E6E6E6;border-radius:16px;display:flex;align-items:center;background:#fff;font-size:15px}
@@ -32,37 +33,37 @@
 .tab svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .fab{position:absolute;right:10px;width:46px;height:46px;border-radius:50%;background:#fff;box-shadow:0 3px 12px rgba(0,0,0,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:5}
 .fab svg{width:21px;height:21px;fill:none;stroke:#222;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.fab b{font-size:9.5px;margin-top:-1px;color:var(--teal)}
-.card{background:#fff;border-radius:12px;padding:13px;margin-bottom:10px}
-.eyebrow{font-size:10.5px;letter-spacing:1.3px;color:var(--teal);font-weight:700;text-transform:uppercase}
-.card h3{font-size:16.5px;margin:5px 0 5px;font-weight:700;line-height:1.3}
-.card p,.p{font-size:13px;line-height:1.55;color:#555}
-.btn{display:block;text-align:center;background:var(--red);color:#fff;font-size:14.5px;font-weight:700;padding:11px;border-radius:22px;margin-top:11px}
+.fab b{font-size:9.5px;margin-top:-1px;color:var(--red)}
+.card{background:#fff;border-radius:8px;padding:13px;margin-bottom:10px}
+.eyebrow{font-size:10.5px;letter-spacing:1.3px;color:var(--cara-dark);font-weight:600;text-transform:uppercase}
+.card h3{font-size:16.5px;margin:5px 0 5px;font-weight:600;line-height:1.3}
+.card p,.p{font-size:13px;line-height:1.55;color:var(--sub)}
+.btn{display:block;text-align:center;background:var(--red);color:#fff;font-size:14.5px;font-weight:500;padding:11px;border-radius:22px;margin-top:11px}
 .btn.teal{background:var(--teal)}.btn.ghost{background:#fff;color:var(--red);border:1.5px solid var(--red)}
 .btn.ghostt{background:#fff;color:var(--teal);border:1.5px solid var(--teal)}
 .btn.sm{display:inline-block;padding:7px 13px;font-size:12.5px;margin-top:0}
 .row{display:flex;align-items:center;justify-content:space-between}
 .sec{display:flex;align-items:baseline;justify-content:space-between;margin:14px 2px 8px}
-.sec h2{font-size:16px;font-weight:700}.sec a{font-size:12px;color:var(--teal);text-decoration:underline}.sec .n{font-size:12px;color:var(--grey)}
-.prod{display:flex;gap:11px;background:#fff;border-radius:12px;padding:11px;margin-bottom:9px}
+.sec h2{font-size:16px;font-weight:600}.sec a{font-size:12px;color:var(--grey)}.sec .n{font-size:12px;color:var(--grey)}
+.prod{display:flex;gap:11px;background:#fff;border-radius:8px;padding:11px;margin-bottom:9px}
 .th{border-radius:9px;flex:0 0 84px;height:84px;display:flex;align-items:flex-end;justify-content:center;font-size:9.5px;color:#7a7470;padding-bottom:6px;letter-spacing:.4px}
 .g1{background:linear-gradient(150deg,#E8EEF2,#CDDBE3)}.g2{background:linear-gradient(150deg,#F5EFE8,#E3D6C8)}.g3{background:linear-gradient(150deg,#EEF5F2,#D2E6DE)}.g4{background:linear-gradient(150deg,#F6ECEE,#E8D1D6)}.g5{background:linear-gradient(150deg,#F1F0EC,#DEDBD2)}
-.prod .i{flex:1;min-width:0}.prod .nm{font-size:14px;font-weight:700;line-height:1.35}
-.tag{display:inline-block;font-size:10.5px;padding:2px 6px;border-radius:4px;background:var(--teal-soft);color:var(--teal);margin:4px 4px 0 0;font-weight:700}
+.prod .i{flex:1;min-width:0}.prod .nm{font-size:14px;font-weight:500;line-height:1.35}
+.tag{display:inline-block;font-size:10.5px;padding:2px 6px;border-radius:4px;background:var(--cara-soft);color:var(--cara-dark);margin:4px 4px 0 0;font-weight:500}
 .tag.red{background:var(--red-soft);color:var(--price)}.tag.grey{background:#F0F0F0;color:#777}
 .why{font-size:11.5px;color:#777;line-height:1.45;margin-top:5px}
-.price{color:var(--price);font-size:17px;font-weight:700}.price small{font-size:12px}
+.price{color:var(--price);font-size:17px;font-weight:500}.price small{font-size:12px}
 .chip{display:inline-block;font-size:12px;background:#fff;border:1px solid #E4E4E4;border-radius:15px;padding:6px 11px;margin:0 6px 6px 0;color:#444}
-.chip.on{background:var(--teal-soft);border-color:var(--teal);color:var(--teal);font-weight:700}
+.chip.on{background:var(--red-soft);border-color:var(--red);color:var(--red);font-weight:500}
 .li{display:flex;align-items:center;gap:11px;padding:13px 2px;border-bottom:1px solid var(--line);font-size:14px}
 .li:last-child{border-bottom:none}.li .k{flex:1}.li .v{font-size:12px;color:var(--grey)}.li .ar{color:#C4C4C4;font-size:15px}
 .ico{width:22px;text-align:center;font-size:17px}
-.av{width:34px;height:34px;border-radius:50%;background:linear-gradient(140deg,#CFE7E2,#8DC4BA);display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;font-weight:700;flex:0 0 34px}
+.av{width:34px;height:34px;border-radius:50%;background:linear-gradient(140deg,#E3C4A3,#B8885C);display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;font-weight:700;flex:0 0 34px}
 .av.m{background:linear-gradient(140deg,#F6C9CC,#EE8F95)}.av.b{background:linear-gradient(140deg,#C9D8F6,#8EA9E6)}.av.o{background:linear-gradient(140deg,#F2DEC6,#D9B48A)}
-.band{background:linear-gradient(160deg,#FFF4F4 0%,#EEF7F5 100%);padding:14px 14px 13px}
-.band h1{font-size:21px;font-weight:700}.band .sub{font-size:12.5px;color:#666;margin-top:3px}
+.band{background:linear-gradient(160deg,#FCE4E4 0%,#FFF6F4 100%);padding:14px 14px 13px}
+.band h1{font-size:21px;font-weight:600}.band .sub{font-size:12.5px;color:var(--sub);margin-top:3px}
 .advchip{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.85);border-radius:20px;padding:4px 11px 4px 4px;flex:0 0 auto}
-.advchip .av{width:28px;height:28px;flex:0 0 28px;font-size:12px}.advchip b{font-size:12px;display:block;line-height:1.2}.advchip span{display:block;font-size:10.5px;line-height:1.2;color:var(--teal);white-space:nowrap}
+.advchip .av{width:28px;height:28px;flex:0 0 28px;font-size:12px}.advchip b{font-size:12px;display:block;line-height:1.2}.advchip span{display:block;font-size:10.5px;line-height:1.2;color:var(--cara-dark);white-space:nowrap}
 .dim{position:absolute;inset:0;background:rgba(0,0,0,.32);z-index:6}
 .sheet{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:20px 20px 0 0;padding:16px 18px 26px;z-index:7}
 .grab{width:38px;height:4px;background:#DDD;border-radius:2px;margin:0 auto 12px}
@@ -71,12 +72,12 @@
 .tog.off{background:#D5D5D5}.tog.off:after{right:auto;left:2px}
 .tl{position:relative;padding-left:26px}.tl:before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:2px;background:#E2E2E2}
 .node{position:relative;margin-bottom:10px}.node:before{content:"";position:absolute;left:-26px;top:15px;width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid #D2D2D2}
-.node.done:before{background:#BFDAD4;border-color:#BFDAD4}.node.now:before{background:var(--teal);border-color:var(--teal);box-shadow:0 0 0 5px rgba(46,125,114,.15)}
-.ph{background:#fff;border-radius:12px;padding:11px 13px}.ph.now{border:1.5px solid var(--teal)}
-.ph .t{font-size:14.5px;font-weight:700}.ph .w{font-size:11px;color:var(--grey);margin-top:1px}.ph .x{font-size:12px;color:#555;margin-top:6px;line-height:1.5}
-.mini{display:flex;gap:7px;margin-top:9px}.mini div{flex:1;background:#F4F7F6;border-radius:8px;padding:7px 4px;font-size:10.5px;text-align:center;color:#555;line-height:1.35}
+.node.done:before{background:#E5CFB8;border-color:#E5CFB8}.node.now:before{background:var(--cara);border-color:var(--cara);box-shadow:0 0 0 5px rgba(176,124,80,.18)}
+.ph{background:#fff;border-radius:8px;padding:11px 13px}.ph.now{border:1.5px solid var(--cara-line)}
+.ph .t{font-size:14.5px;font-weight:600}.ph .w{font-size:11px;color:var(--grey);margin-top:1px}.ph .x{font-size:12px;color:#555;margin-top:6px;line-height:1.5}
+.mini{display:flex;gap:7px;margin-top:9px}.mini div{flex:1;background:var(--bg);border-radius:8px;padding:7px 4px;font-size:10.5px;text-align:center;color:#555;line-height:1.35}
 .msg{max-width:84%;border-radius:14px;padding:10px 12px;font-size:13px;line-height:1.55;margin-bottom:9px}
-.msg.me{background:var(--teal);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.msg.me{background:var(--pink);color:var(--ink);margin-left:auto;border-bottom-right-radius:4px}
 .msg.ai{background:#fff;border-bottom-left-radius:4px}
 .ail{font-size:9.5px;color:#777;background:#F0F0F0;border-radius:4px;padding:1px 6px;display:inline-block;margin-bottom:5px}
 .src{font-size:10.5px;color:var(--grey);margin-top:7px;padding-top:7px;border-top:1px solid var(--line)}
@@ -112,7 +113,7 @@
 .grid10{display:grid;grid-template-columns:repeat(5,1fr);row-gap:14px;background:#fff;border-radius:10px;padding:14px 4px}
 .grid10 div{text-align:center;font-size:11px;color:#444}.grid10 .e{font-size:21px;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 5px}
 .pg{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.pc{background:#fff;border-radius:10px;overflow:hidden}.pc .im{height:150px;display:flex;align-items:flex-end;justify-content:center;font-size:10px;color:#777;padding-bottom:8px}
+.pc{background:#fff;border-radius:8px;overflow:hidden}.pc .im{height:150px;display:flex;align-items:flex-end;justify-content:center;font-size:10px;color:#777;padding-bottom:8px}
 .pc .b{padding:8px 9px 10px}.pc .nm{font-size:13px;line-height:1.35;height:35px;overflow:hidden}
 .alert{background:#fff;border:1.5px solid var(--price);border-radius:12px;padding:12px 13px;margin-bottom:10px}
 .alert .h{font-size:10.5px;letter-spacing:1.2px;color:var(--price);font-weight:700}
@@ -123,10 +124,11 @@
 
 .jc{display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:5px 11px;border-radius:15px;border:1.3px solid var(--teal);color:var(--teal);font-size:11.5px;font-weight:700;background:#fff}.jc .ji{font-size:12px}
 .hr{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.hr .jc{margin-top:0;flex:0 0 auto}
-.circbar{display:flex;justify-content:space-between;align-items:center;background:#EEF7F5;border:1.2px solid #CFE5E0;border-radius:10px;padding:8px 11px;margin-bottom:10px;font-size:11.5px;color:#555}.circbar a{color:var(--teal);font-weight:700}
+.circbar{display:flex;justify-content:space-between;align-items:center;background:var(--pink-soft);border:1.2px solid #F6D3D3;border-radius:10px;padding:8px 11px;margin-bottom:10px;font-size:11.5px;color:#555}.circbar a{color:var(--teal);font-weight:700}
 
 html,body{height:100%}
-body{margin:0;background:#E9E6E1;font-family:"PingFang SC","Noto Sans CJK SC",system-ui,-apple-system,sans-serif;color:#222;overflow:hidden}
+body{margin:0;background:#E9E6E1;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;color:#222;overflow:hidden}
+.phone{color:var(--ink)}
 @font-face{font-family:'MWGoudy';src:url(data:font/woff2;base64,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) format('woff2');font-weight:400;font-style:normal}
 html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%}
 .phonemode .topbar,.phonemode .pside,.phonemode .status,.phonemode .lstatus{display:none}
@@ -159,7 +161,7 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 .pside-r button:hover{background:#fff}
 .pside-r button:focus:not(:focus-visible){outline:none}
 .pside-r .navrow{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.pside-r button.primary{background:#2E7D72;border-color:#2E7D72;color:#fff;font-weight:700}
+.pside-r button.primary{background:var(--navy);border-color:var(--navy);color:#fff;font-weight:600}
 .pside-r button.wide{width:100%}
 .pside-r .langbox{margin-top:10px;display:flex;flex-direction:column;gap:7px}
 .pside-r .langlab{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#8a837a;font-weight:700}
@@ -172,19 +174,19 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 .seg{display:inline-flex;border:1px solid #CFC8BE;border-radius:8px;overflow:hidden;align-self:flex-start}
 .seg button{font:inherit;font-size:13px;padding:7px 14px;border:0;background:#fff;cursor:pointer;color:#555}
 .seg button+button{border-left:1px solid #CFC8BE}
-.seg button.on{background:#2E7D72;color:#fff;font-weight:700}
+.seg button.on{background:var(--navy);color:#fff;font-weight:700}
 .panel.hidden{display:none}
-.stepno{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#2E7D72;font-weight:700}
-.panel h2{font-size:19px;line-height:1.3;margin:0;color:#2E3B2F}
+.stepno{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--cara-dark);font-weight:700}
+.panel h2{font-size:19px;line-height:1.3;margin:0;color:var(--navy)}
 .say{font-size:14.5px;line-height:1.55;color:#333;background:#F6F4F0;border-radius:10px;padding:12px 14px}
 .hint{font-size:12px;color:#8a837a}
 .ctrls{display:flex;gap:8px;flex-wrap:wrap}
 .ctrls button{font:inherit;font-size:13px;padding:7px 12px;border-radius:8px;border:1px solid #CFC8BE;background:#fff;cursor:pointer}
-.ctrls button.primary{background:#2E7D72;border-color:#2E7D72;color:#fff;font-weight:700}
+.ctrls button.primary{background:var(--navy);border-color:var(--navy);color:#fff;font-weight:700}
 .steplist{list-style:none;margin:6px 0 0;padding:0;border-top:1px solid #EEE}
 .steplist li{font-size:12.5px;padding:7px 4px;border-bottom:1px solid #F1EEEA;cursor:pointer;color:#555;display:flex;gap:8px}
 .steplist li span{color:#aaa;width:18px}
-.steplist li.cur{color:#2E3B2F;font-weight:700;background:#F2F8F6}
+.steplist li.cur{color:var(--navy);font-weight:700;background:#F6F1EB}
 .steplist li.done{color:#9a948c}
 .keys{font-size:11px;color:#9a948c;line-height:1.6;margin-top:auto}
 .clickable{cursor:pointer}
@@ -192,7 +194,7 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 .switch.blue2{background:#fff;color:#2C6BE0;border:1px solid #2C6BE0;margin:0 0 10px}
 .pulse{animation:pulse 1.3s infinite;outline:3px solid #F29A2E;outline-offset:2px}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(242,154,46,.55)}70%{box-shadow:0 0 0 14px rgba(242,154,46,0)}100%{box-shadow:0 0 0 0 rgba(242,154,46,0)}}
-.closex{position:absolute;right:18px;top:14px;font-size:13.5px;font-weight:700;color:#2E7D72;cursor:pointer;padding:2px 4px;border-radius:8px}
+.closex{position:absolute;right:18px;top:14px;font-size:13.5px;font-weight:500;color:var(--sub);cursor:pointer;padding:2px 4px;border-radius:8px}
 .toast{position:absolute;left:50%;bottom:120px;transform:translateX(-50%);background:rgba(20,20,20,.86);color:#fff;padding:11px 15px;border-radius:12px;font-size:13px;line-height:1.45;z-index:30;width:280px;text-align:center;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.show{opacity:1}
 /* interactive layer */
@@ -205,7 +207,7 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 .field input[type=date]{position:absolute;inset:0;width:100%;height:100%;opacity:0;border:0;cursor:pointer}
 .tin{width:100%;background:#F4F4F4;border:1.5px solid transparent;border-radius:8px;padding:8px 12px;font:inherit;font-size:13px;color:#222;outline:none}
 .tin:focus{border-color:var(--teal);background:#fff}
-.preview{font-size:11.5px;color:var(--teal);margin-top:5px;font-weight:700;min-height:15px}
+.preview{font-size:11.5px;color:var(--cara-dark);margin-top:5px;font-weight:600;min-height:15px}
 .preview.err{color:var(--price)}
 .cbox{flex:0 0 18px;height:18px;border-radius:4px;background:var(--teal);color:#fff;font-size:12px;text-align:center;line-height:18px}
 .cbox.off{background:#fff;border:1.5px solid #C8C8C8;color:transparent;line-height:15px}
@@ -214,6 +216,8 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 .wbar .wsend{display:none;font-size:13px;background:#07C160;color:#fff;border-radius:5px;padding:7px 11px;font-weight:700}
 .wbar .wsend.show{display:inline-block}
 .scroll.wc .switch{position:sticky;top:6px;z-index:2}
+.sbar{background:#fff;padding:6px 12px 8px}.sbar.dark{background:var(--search);padding:9px 12px}.sbar.dark .sbox{background:#fff}
+.pinkzone{background:var(--pink);padding:10px 8px}
 .sbox{background:#F3F3F3;border-radius:18px;padding:0 14px;display:flex;align-items:center;gap:6px;font-size:13px;color:#999}
 .sbox input{flex:1;border:0;background:transparent;outline:none;font:inherit;font-size:13px;color:#222;padding:8px 0;min-width:0}
 .sbox .clr{color:#bbb;font-size:14px}
@@ -227,7 +231,7 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 .tick{width:20px;height:20px;border-radius:50%;border:1.5px solid #CFCFCF;flex:0 0 20px;display:flex;align-items:center;justify-content:center;font-size:11px;color:transparent}
 .tick.on{background:var(--teal);border-color:var(--teal);color:#fff}
 .li.ticked .k b{color:#999;text-decoration:line-through}
-.jlinks{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;font-size:12px;color:var(--teal);margin-top:4px}
+.jlinks{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;font-size:12px;color:var(--sub);margin-top:4px}
 .mwtitle{font-family:'MWGoudy',Georgia,serif;font-weight:400;font-size:29px;letter-spacing:.2px;margin-top:4px;color:#2b2b2b}
 .meiqibtn{display:inline-block;font-size:12px;font-weight:600;color:#07A157;background:rgba(7,193,96,.10);border-radius:14px;padding:5px 13px}
 .meiqibtn.done{color:#7FA98F;background:rgba(7,193,96,.06)}
@@ -236,7 +240,7 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 .mpfoot .scroll:not(:has(.sp))::after{content:'';display:block;width:88px;height:24px;margin:10px auto 18px;background:var(--mwlogo) center/contain no-repeat;opacity:.75;flex:0 0 auto}
 .mpfoot .sp{position:relative}.mpfoot .sp::before{content:'';position:absolute;left:50%;top:6px;width:88px;height:24px;margin-left:-44px;background:var(--mwlogo) center/contain no-repeat;opacity:.75}
 .optcard{position:relative}.optnote{position:absolute;top:12px;right:13px;font-size:11px;color:#aaa}
-.rolesub{margin:0 0 8px;padding:8px 8px 2px;background:#F5F7F6;border-radius:8px}.rolesub .chip{font-size:11.5px;padding:5px 10px}
+.rolesub{margin:0 0 8px;padding:8px 8px 2px;background:var(--bg);border-radius:8px}.rolesub .chip{font-size:11.5px;padding:5px 10px}
 .pickgrid{display:flex;flex-wrap:wrap;margin-top:8px}.pickclear{text-align:center;font-size:12.5px;color:#999;margin-top:8px;text-decoration:underline}.pickback{font-size:12.5px;color:var(--teal);margin:8px 0 4px}
 .preview:empty{display:none}
 .fromchip{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:#A3A3A3;border:1px solid #E8E8E8;background:rgba(255,255,255,.5);border-radius:9px;padding:1px 7px 1px 5px;line-height:15px}
@@ -329,7 +333,7 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 .shopwrap{flex:1;display:flex;min-height:0;background:#fff}
 .side{width:86px;flex:0 0 86px;background:#F7F7F7;overflow-y:auto;scrollbar-width:none}.side::-webkit-scrollbar{display:none}
 .side div{padding:14px 6px;font-size:12.5px;text-align:center;color:#555;border-left:3px solid transparent;line-height:1.3}
-.side .on{background:#fff;color:var(--red);font-weight:700;border-left-color:var(--red)}
+.side .on{background:#fff;color:var(--red);font-weight:500;border-left-color:var(--red)}
 .srow{display:flex;gap:10px;padding:10px;border-bottom:1px solid #F4F4F4;align-items:stretch}
 .srow .pimg{flex:0 0 78px;width:78px;height:78px}
 .srow .i{flex:1;min-width:0;display:flex;flex-direction:column}
@@ -339,7 +343,7 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 .plus{width:24px;height:24px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;line-height:1}
 .brandgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:10px}
 .brandgrid div{border:1px solid #EEE;border-radius:8px;padding:10px 4px;text-align:center;font-size:11.5px;line-height:1.3}
-.brandgrid div b{display:block;font-size:16px;color:var(--teal)}
+.brandgrid div b{display:block;font-size:16px;color:var(--ink)}
 .endnote{font-size:10.5px;color:#aaa;text-align:center;padding:14px 12px 22px;line-height:1.5}
 /* product page */
 .swiper{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;background:#fff}.swiper::-webkit-scrollbar{display:none}
@@ -352,13 +356,13 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 .pbar{background:#fff;border-top:1px solid #EEE;padding:8px 10px 26px;display:flex;gap:6px;align-items:center}
 .pbar .ic{text-align:center;font-size:10px;color:#555;width:44px;position:relative}.pbar .ic div{font-size:19px;line-height:22px}
 .pbar .ic .badge{position:absolute;top:-4px;right:2px}
-.pbar .b1,.pbar .b2{flex:1;text-align:center;color:#fff;font-size:14px;font-weight:700;padding:11px 4px}
+.pbar .b1,.pbar .b2{flex:1;text-align:center;color:#fff;font-size:14px;font-weight:500;padding:11px 4px}
 .pbar .b1{background:#FFB03F;border-radius:20px 0 0 20px}.pbar .b2{background:var(--red);border-radius:0 20px 20px 0}
 .whoband{font-size:11px;color:#7a746c;margin-top:2px;text-align:center}
 /* round 2: decision first, More, Shop marketing, product sheet, cart ask bar */
-.decide{border:1.5px solid var(--teal)}
+.decide{border:1.5px solid var(--cara-line)}
 .decide h3{margin-top:0}
-.sumrow{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#F4F7F6;border-radius:8px;padding:8px 10px;font-size:12.5px;margin:9px 0 8px}
+.sumrow{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--bg);border-radius:8px;padding:8px 10px;font-size:12.5px;margin:9px 0 8px}
 .consentrow{display:flex;gap:8px;align-items:center;font-size:12.5px;color:#333}
 .more{margin:2px 0 10px}
 .morehd{display:flex;justify-content:space-between;align-items:center;padding:10px 4px;font-size:13px;color:#777;border-top:1px solid #E6E6E6}
@@ -368,41 +372,41 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 .opt{display:flex;gap:10px;align-items:center;padding:9px 0;border-top:1px solid #F0F0F0}
 .opt .pimg{flex:0 0 56px;width:56px;height:56px}
 .opt .i{flex:1;min-width:0}
-.trybox{display:flex;gap:10px;align-items:center;background:#F4F7F6;border-radius:10px;padding:10px;margin-top:10px}
+.trybox{display:flex;gap:10px;align-items:center;background:var(--bg);border-radius:10px;padding:10px;margin-top:10px}
 .ailine{font-size:10.5px;color:#7a5b1e;background:#FFF8E6;border-radius:6px;padding:5px 9px;margin-bottom:9px;text-align:center}
 .src[data-act]{color:var(--teal)}
-.askbar{display:flex;gap:9px;align-items:center;background:#F4F7F6;border-top:1px solid #E3ECE9;padding:9px 14px;font-size:13px}
+.askbar{display:flex;gap:9px;align-items:center;background:var(--bg);border-top:1px solid #EBEDF0;padding:9px 14px;font-size:13px}
 .fbanner{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.fbanner::-webkit-scrollbar{display:none}
 .fslide{flex:0 0 100%;scroll-snap-align:start;height:136px;padding:14px;position:relative;color:#3a2a18;display:flex;flex-direction:column;justify-content:center}
 .fslide b{font-size:17px;line-height:1.25;max-width:64%}.fslide span{font-size:11.5px;margin-top:4px;max-width:60%;line-height:1.4}
 .fslide .go{margin-top:8px;align-self:flex-start;background:rgba(255,255,255,.88);border-radius:12px;padding:4px 10px;font-size:11.5px;font-weight:700;max-width:none}
 .fslide .pimg{position:absolute;right:10px;top:20px;width:96px;height:96px;flex:none;border:0;background:transparent}
 .fdots{text-align:center;font-size:7px;letter-spacing:4px;margin:5px 0 0;color:#ddd}
-.fsec{display:flex;justify-content:space-between;align-items:baseline;padding:13px 10px 6px}.fsec b{font-size:14px}
+.fsec{display:flex;justify-content:space-between;align-items:baseline;padding:13px 10px 6px}.fsec b{font-size:14px;font-weight:600}.fsec .lnk{color:var(--grey);text-decoration:none}
 .newrow{display:flex;gap:8px;overflow-x:auto;padding:0 10px 4px;scrollbar-width:none}.newrow::-webkit-scrollbar{display:none}
 .newrow>div{flex:0 0 92px;position:relative}
 .newrow .pimg{width:92px;height:92px;flex:none}
 .newtag{position:absolute;left:4px;top:4px;background:var(--teal);color:#fff;font-size:9px;font-weight:700;border-radius:4px;padding:1px 5px}
 .evrow{display:flex;gap:10px;align-items:center;padding:9px 10px;border-bottom:1px solid #F4F4F4}
-.evico{width:42px;flex:0 0 42px;height:42px;border-radius:8px;background:var(--teal-soft);font-size:19px;display:flex;align-items:center;justify-content:center}
-.stagecta{margin:10px 10px 0;border:1.5px solid var(--teal);border-radius:10px;padding:9px 11px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px}
+.evico{width:42px;flex:0 0 42px;height:42px;border-radius:8px;background:var(--pink-soft);font-size:19px;display:flex;align-items:center;justify-content:center}
+.stagecta{margin:10px 10px 0;border:1.5px solid var(--cara-line);border-radius:10px;padding:9px 11px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px}
 .benefit{margin:0 10px;background:linear-gradient(120deg,#F5E6D3,#E9D3B6);border-radius:10px;padding:6px 12px 10px}
 .benefit .li{border-color:rgba(0,0,0,.07);padding:8px 0;font-size:12.5px}
-.stamp{display:inline-block;background:var(--teal-soft);color:var(--teal);font-size:11.5px;font-weight:700;border-radius:6px;padding:3px 8px;margin:2px 0 6px}
+.stamp{display:inline-block;background:var(--cara-soft);color:var(--cara-dark);font-size:11.5px;font-weight:600;border-radius:6px;padding:3px 8px;margin:2px 0 6px}
 .sheetrow{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:12.5px;line-height:1.45}.sheetrow .k{flex:0 0 96px;font-weight:700}.sheetrow .v{flex:1;color:#444}
-.scrnote{font-size:12.5px;line-height:1.5;color:#444;background:#FBFAF7;border-left:3px solid #2E7D72;border-radius:6px;padding:8px 10px}
-.scrnote b{display:block;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#2E7D72;margin-bottom:2px}
+.scrnote{font-size:12.5px;line-height:1.5;color:#444;background:#FBFAF7;border-left:3px solid var(--cara);border-radius:6px;padding:8px 10px}
+.scrnote b{display:block;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--cara-dark);margin-bottom:2px}
 .gavatar{width:64px;height:64px;margin:0 auto;border-radius:8px;background:#E6E6E6;display:grid;grid-template-columns:1fr 1fr;gap:2px;padding:3px}
-.gavatar i{font-style:normal;border-radius:3px;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,#CFE7E2,#8DC4BA)}
+.gavatar i{font-style:normal;border-radius:3px;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,#E3C4A3,#B8885C)}
 .gavatar i.m{background:linear-gradient(140deg,#F6C9CC,#EE8F95)}.gavatar i.b{background:linear-gradient(140deg,#C9D8F6,#8EA9E6)}.gavatar i.o{background:linear-gradient(140deg,#F2DEC6,#D9B48A)}
 .shopwrap.full .side{display:none}
 .ftiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:12px 10px 2px}
-.ftiles div{background:#FBF4F4;border-radius:10px;padding:10px 6px;text-align:center;font-size:12px;font-weight:700;color:#5a4a42}
+.ftiles div{background:#fff;border-radius:8px;padding:10px 6px;text-align:center;font-size:12px;font-weight:500;color:var(--ink)}
 .ftiles b{display:block;font-size:20px;font-weight:400;margin-bottom:3px}.ftiles span{display:block;font-size:10px;font-weight:400;color:#999;margin-top:2px}
 .storecard{margin:0 10px;background:#2B2B2B;color:#fff;border-radius:10px;padding:16px 12px;text-align:center}
 .sclogo{font-family:'MWGoudy',Georgia,serif;font-size:28px;line-height:1}.sctag{font-size:11px;letter-spacing:2px;color:#ccc;margin-top:3px}
-.mehead{background:linear-gradient(120deg,#E3C29B,#C9A57B);padding:16px 16px 14px}
-.mbar{margin-top:12px;background:#2E2E33;color:#E9D2A8;border-radius:10px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px}.mbar b{color:#fff;font-size:12px}
+.mehead{background:linear-gradient(120deg,#C79B72,#A8784C);padding:16px 16px 14px}
+.mbar{margin-top:12px;background:var(--navy);color:#E9D2A8;border-radius:10px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px}.mbar b{color:#fff;font-size:12px}
 .jump{font:inherit;font-size:12.5px;padding:6px 8px;border-radius:8px;border:1px solid #CFC8BE;background:#fff;width:100%}
 </style>
 </head>
@@ -458,7 +462,7 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
  <div class="dim" data-go="s03"></div>
  <div class="sheet"><div class="closex" data-go="s03">Close</div><div class="grab"></div>
   <div style="font-size:17px;font-weight:700">Why you're seeing these</div>
-  <div class="row" style="margin:10px 0 4px;background:#F4F7F6;border-radius:10px;padding:10px 12px"><div><div style="font-size:13.5px;font-weight:700">Personalised suggestions</div><div style="font-size:11px;color:#888">Off: you see the standard list for your stage</div></div><div class="tog" id="whytog" data-act="personal"></div></div>
+  <div class="row" style="margin:10px 0 4px;background:var(--bg);border-radius:10px;padding:10px 12px"><div><div style="font-size:13.5px;font-weight:700">Personalised suggestions</div><div style="font-size:11px;color:#888">Off: you see the standard list for your stage</div></div><div class="tog" id="whytog" data-act="personal"></div></div>
   <div style="font-size:12px;color:#888;margin:8px 0 0">Four things decide it:</div>
   <div id="whyrows"></div>
   <div id="whymore"></div>
@@ -466,21 +470,21 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 </div><div class="tabbar" data-on="Today"></div></div>
 
 <div class="phone screen" id="s05" data-who="Mother: Mini Program" data-label="05 · Today tab before joining: the current home, plus one card"><div class="status"></div><div class="nav">motherswork<div class="cap"></div></div>
-<div class="scroll">
- <div style="background:#3A3A3A;padding:9px 12px"><div style="background:#fff;border-radius:18px;padding:8px 14px;font-size:13px;color:#999" data-act="shopsearch">&#9906; Search products</div></div>
+<div class="scroll" style="background:var(--pink)">
+ <div style="background:var(--search);padding:9px 12px"><div style="background:#fff;border-radius:18px;padding:8px 14px;font-size:13px;color:#999" data-act="shopsearch">&#9906; Search products</div></div>
  <div style="height:128px;background:linear-gradient(120deg,#F7EEE6,#EAD9C9);padding:12px 18px;position:relative" data-act="shop:Feeding">
   <div style="font-size:10px;color:#7a5a44">motherswork, through milestones &amp; moments</div>
   <div style="font-size:22px;font-weight:700;color:#7a2d22;margin-top:8px;line-height:1.25">Every bite is<br>a mother's love</div>
   <div style="position:absolute;bottom:9px;left:0;right:0;text-align:center;font-size:9px;color:#fff">&#9679; &#9679; &#9679; &#9679; &#9675;</div></div>
  <div class="pad">
-  <div class="card" style="border:1.5px solid var(--teal)"><div class="eyebrow">New: your family journey</div><h3>Helping you every week, from pregnancy to school</h3><a class="btn teal" style="margin-top:8px" data-go="s01">Start my journey</a><div style="text-align:center;font-size:11.5px;color:#999;margin-top:7px">or scan the code at any motherswork store</div></div>
+  <div class="card decide"><div class="eyebrow">New: your family journey</div><h3>Helping you every week, from pregnancy to school</h3><a class="btn teal" style="margin-top:8px" data-go="s01">Start my journey</a><div style="text-align:center;font-size:11.5px;color:#999;margin-top:7px">or scan the code at any motherswork store</div></div>
   <div id="homegrid"></div>
   <div style="background:#fff;border-radius:10px;margin-top:10px;padding:12px;text-align:center;font-size:14px;letter-spacing:1px" data-act="shop:brands">FEATURED BRANDS</div>
  </div>
 </div><div class="fabs"></div><div class="tabbar" data-on="Today"></div></div>
 
 <div class="phone screen" id="s06" data-who="Mother: Mini Program" data-label="06 · Shop tab: motherswork's catalogue, plus &quot;For my stage&quot;"><div class="status"></div><div class="nav">Shop<div class="cap"></div></div>
- <div style="background:#fff;padding:6px 12px 8px"><div class="sbox">&#9906;<input id="shopq" placeholder="Search products" autocomplete="off"><span class="clr" data-act="clearq">&#10005;</span></div></div>
+ <div class="sbar" id="shopsbar"><div class="sbox">&#9906;<input id="shopq" placeholder="Search products" autocomplete="off"><span class="clr" data-act="clearq">&#10005;</span></div></div>
  <div class="shopwrap"><div class="side" id="shopside"></div><div class="scroll" id="shoplist"></div></div>
  <div class="fabs"></div><div class="tabbar" data-on="Shop"></div></div>
 
@@ -504,7 +508,7 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 
 <div class="phone screen" id="s10" data-who="Mother: Mini Program" data-label="10 · Step 2, Making space: shortlist, try-out, delivery timed to the birth"><div class="status"></div><div class="nav"><div class="pill"></div>Making space<div class="cap"></div></div><div class="scroll"><div class="pad"><div style="font-size:19px;font-weight:700;margin:2px 2px 2px">Try, then decide</div><div style="font-size:12px;color:#888;margin:0 2px 10px">Step 2 of 5. Pregnancy, weeks 28–36. In progress.</div><div class="circbar"><span>&#128101; Families at this step</span><span class="later" style="color:#999">Opens when you reach this step</span><a data-act="circle">Join the Making space circle &#8250;</a></div>
  <div class="card"><div class="eyebrow">Your shortlist, saved with Meiqi</div>
-  <div class="li" data-act="product:jlz-aer2-buggy-wildride-special-black"><span class="k">Stroller: Joolz Aer²</span><span class="v" style="color:var(--teal)">bought &#10003;</span></div>
+  <div class="li" data-act="product:jlz-aer2-buggy-wildride-special-black"><span class="k">Stroller: Joolz Aer²</span><span class="v" style="color:var(--cara-dark)">bought &#10003;</span></div>
   <div class="li" data-go="s02"><span class="k">Car seat: 2 to try</span><span class="ar">&#8250;</span></div>
   <div class="li" data-act="shop:Sleep"><span class="k">Sleep: see the range in store</span><span class="ar">&#8250;</span></div>
   <a class="btn teal" data-act="book:SEAT">Book a try-out, Saturday 10:30</a></div>
@@ -523,7 +527,7 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 
 <div class="phone screen" id="s12" data-who="Mother: Mini Program" data-label="12 · Step 4, Small steps: four moments, not fifty-two"><div class="status"></div><div class="nav"><div class="pill"></div>Small steps<div class="cap"></div></div><div class="scroll"><div class="pad"><div style="font-size:19px;font-weight:700;margin:2px 2px 2px">Four moments, not fifty-two</div><div style="font-size:12px;color:#888;margin:0 2px 10px">Step 4 of 5. Baby 6 weeks → 12 months.</div><div class="circbar"><span>&#128101; Families at this step</span><span class="later" style="color:#999">Opens when you reach this step</span><a data-act="circle">Join the Small steps circle &#8250;</a></div>
  <div class="card" data-go="s25"><div class="eyebrow">Refills, when you run out</div><p>Timed from your own orders, not from a calendar. "Buy again" is one tap.</p></div>
- <div class="card" style="border:1.5px solid var(--teal)"><div class="eyebrow">Solids, around six months</div><h3>High chair and feeding set</h3><p>Three options, and a place at the nutrition workshop in store.</p><a class="btn teal" data-act="shop:Feeding">See the options</a></div>
+ <div class="card decide"><div class="eyebrow">Solids, around six months</div><h3>High chair and feeding set</h3><p>Three options, and a place at the nutrition workshop in store.</p><a class="btn teal" data-act="shop:Feeding">See the options</a></div>
  <div class="card" data-act="shop:Strollers"><div class="eyebrow">On the move, 6–10 months</div><p>A compact stroller, matched to how you travel.</p></div>
  <div class="card" data-act="product:nuna-todl-next-carseat"><div class="eyebrow">First birthday, 12 months</div><p>A play session in store, and the car-seat check.</p></div></div></div><div class="fabs"></div><div class="tabbar" data-on="Journey"></div></div>
 
@@ -554,7 +558,7 @@ html.phonemode,html.phonemode body{background:#fff;-webkit-text-size-adjust:100%
 
 <div class="phone screen" id="s17" data-who="Mother: Mini Program" data-label="17 · Your circle (live from the pilot): families due in the same month"><div class="status"></div><div class="nav"><div class="pill"></div>Your circle<div class="cap"></div></div>
 <div class="scroll"><div class="pad">
-<div class="card decide" style="background:linear-gradient(160deg,#FFF4F4,#EEF7F5)"><div class="eyebrow">Your circle</div><h3 id="circletitle">Due December 2026, Shanghai</h3>
+<div class="card decide" style="background:linear-gradient(160deg,#FCE4E4,#FFF6F4)"><div class="eyebrow">Your circle</div><h3 id="circletitle">Due December 2026, Shanghai</h3>
   <div style="display:flex;align-items:center;gap:8px;margin-top:6px"><div class="av" style="width:28px;height:28px;flex:0 0 28px;font-size:11px">M</div><span style="font-size:12.5px;color:#555" id="circlecount">146 families, guided by Meiqi</span></div>
   <div id="circlejoin"></div></div>
  <div class="card"><div class="eyebrow">How it works</div>
@@ -678,6 +682,8 @@ const gridHTML=()=>`<div class="grid10">${GRID.map(([k,e,t,c])=>`<div data-act="
 /* checked facts for the story's two seats, from the product sheets */
 const FACTS={
  [SEAT]:{fit:"It installs with your car's seat belt, or on the Pipa Next base using your car's ISOFIX points (the base is sold separately). In store, Meiqi can check it in your own car in twenty minutes.",weight:'It weighs 3.2 kg, or 2.8 kg without the inserts and canopy.',age:'From birth to 13 kg, for babies 40–83 cm tall. It meets the R129 i-Size standard.'},
+ [STROLLER]:{age:'The Joolz Aer² seat takes children up to 22 kg.'},
+ ['jlz-aer2-buggy-wildride-special-boho']:{age:'The Joolz Aer² seat takes children up to 22 kg.'},
  [SEATB]:{fit:"It installs with your car's seat belt, using the green belt guides. It is rearward-facing only.",weight:'It weighs 3.5 kg.',age:'From birth to about 15 months: 40–87 cm, up to about 13 kg. It meets R129/03 (i-Size).'}
 };
 const WHY={[SEAT]:'Your stroller is bought; the seat comes next.',[GIFT]:'For the hospital bag: swaddle, wrap and blanket.',[NAPPY]:'Newborn size, 2–5 kg, for the first weeks.','little-rei-x-cambrass-moon-nursing-pillow':'For feeding, from the first day home.','little-rei-swaddle-wrap-with-velcro':'A wrap with velcro, for the first nights.','love-to-dream-swaddle-up-original-oatmeal-marl':'The next size of sleepwear for this age.','taf-toys-tummy-time-trainer':'Play on the floor at this age.','stokke-tripp-trapp-chair':'Solids start around six months; the chair adjusts as your child grows.','stokke-tripp-trapp-baby-set':'Turns the Tripp Trapp into a seat for a baby.','little-rei-silicone-round-plate':"Little Rei's plate, for first meals.",'nuna-todl-next-carseat':'For when the infant seat is outgrown.','hape-maple-blocks':'Play and learning for this age.','trixie-silicone-divided-suction-plate':'A plate that stays on the tray.','magna-tiles-learn-letters-56pc-set':'Play and learning for this age.','micro-scooter-mini-deluxe-magic-led':'For the first scooter, from about age 2.','ltv-chicken-coop-playset':'Pretend play for this age.','micro-scooter-mini-deluxe-foldable-led':'Folds for the car boot.','the-original-magna-tiles-rail-racers™':'Building play for this age.'};
@@ -702,7 +708,7 @@ const SLOTS={'Sat 10:30':'Saturday 10:30','Sat 14:00':'Saturday 14:00','Sun 11:0
 const DEFAULT={joined:false,meiqiAdded:false,name:'Li Wen',role:'Mother',due:'2026-12-20',district:"Jing'an",city:'Shanghai',consent:true,car:'Yes',answers:{},archive:true,offers:false,personal:true,freq:'key',deleted:[],
  cart:[{id:SEAT,q:1,when:'due'}],checkout:[],coFrom:'cart',addr:0,note:'',bookings:[],orders:[],subs:{},earned:0,product:SEAT,
  chosen:[],pickKey:null,circle:false,more:{},shop:{cat:'featured',brand:'',sort:'rec',dir:1,q:'',limit:40},checks:{},sel2:SEAT,opt:{},
- ask:{[SEAT]:[{w:'me',x:'Will it fit in the back of our hatchback?'},{w:'ai',x:FACTS[SEAT].fit,src:1},{w:'note',x:"Choosing between two seats goes to <b>Meiqi</b>, a person. Health questions go to your doctor."}]},
+ ask:{[SEAT]:[{w:'me',x:'Our baby is due in December. Will she still fit in our Joolz when she weighs 20 kg?'},{w:'ai',x:'Yes. The Joolz Aer² seat takes children up to 22 kg, so it will be perfect for your daughter!',src:1,pid:STROLLER},{w:'note',x:"Choosing between two seats goes to <b>Meiqi</b>, a person. Health questions go to your doctor."}]},
  askPending:null,
  wechat:[{t:'time',x:'Yesterday 21:40'},{t:'card',w:'me',pid:SEAT},{t:'text',w:'me',x:'Which of the two seats is better for us? We drive twice a week and my mother will carry it too.'},{t:'text',w:'ai',x:"I've passed this to Meiqi with your details. She'll reply by 10:00 tomorrow."},{t:'time',x:'Today 09:52'},{t:'text',w:'meiqi',x:"Good morning! For twice-a-week driving with grandma carrying it, I'd take the Nuna: it is the lighter one, 3.2 kg against 3.5 kg, and it can click onto a base that stays in your car. Come on Saturday and try lifting both; five minutes decides it."},{t:'book',w:'meiqi'}],
  wcNow:false,
@@ -770,6 +776,7 @@ const ZH={'Your adviser':'您的顾问','Due month not used: consent is off':'�
  'The years after the pram':'推车之后的岁月','Child 1 → 6 years':'孩子1 → 6岁','a message a month at most':'每月最多一条消息','By age':'按年龄','Play and learning, by age':'按年龄的玩具与学习',"Three choices at each age, chosen by our buyers. Play, learn & grow is 44% of motherswork's China sales.":'每个年龄三个选择，由我们的买手精选。玩耍、学习与成长类占 motherswork 中国销售额的44%。','See this age':'查看这个年龄','Outgrown':'用不上了','We tell you when the car seat or the sleep bag stops fitting.':'安全座椅或睡袋不合适时，我们会告诉您。','Occasions':'节日与生日','Birthdays and festivals: a gift list relatives can buy from.':'生日和节日：亲友可以从礼物清单中购买。','In store':'门店活动','Weekend play sessions, a reason to keep visiting.':'周末游戏时光，常来逛逛的理由。',
  // Ask
  "AI assistant (Tencent ADP, Hunyuan model). It answers only from motherswork's checked product sheets, and never on health.":'AI 助手（腾讯 ADP，混元大模型）。只根据 motherswork 审核过的商品资料回答，不回答健康问题。','Will it fit my car?':'能装进我的车吗？','How heavy is it?':'有多重？','Until what age?':'能用到多大？','How do I clean it?':'怎么清洁？','What age is it for?':'适合多大的宝宝？','How much is it?':'多少钱？','Will it fit in the back of our hatchback?':'能装进我们两厢车的后排吗？','AI-generated':'AI 生成','From motherswork product data, checked by our advisers':'来自 motherswork 商品资料，经顾问审核','updated Sept 2026':'2026年9月更新','Choosing between two seats goes to':'两款座椅怎么选，交给真人顾问',', a person. Health questions go to your doctor.':'。健康问题请咨询您的医生。',"Ask anything about this product. I'm an AI: choices go to":'关于这件商品，尽管问。我是 AI：怎么选交给真人顾问',', a person, and health questions go to your doctor.':'，健康问题请咨询您的医生。','Send this to Meiqi':'发给美琪','Sends this conversation to Meiqi, your adviser, only when you tap. Your name and phone number are not sent to the AI.':'只有在您点击后，这段对话才会发给您的顾问美琪。您的姓名和手机号不会发送给 AI。','Ask about a product or what to prepare…':'问问商品，或需要准备什么…',
+ 'Our baby is due in December. Will she still fit in our Joolz when she weighs 20 kg?':'宝宝12月出生。等她长到20公斤，还能坐我们的 Joolz 推车吗？','Yes. The Joolz Aer² seat takes children up to 22 kg, so it will be perfect for your daughter!':'可以。Joolz Aer² 的座椅最高可承重22公斤，非常适合您的女儿！','The Joolz Aer² seat takes children up to 22 kg.':'Joolz Aer² 的座椅最高可承重22公斤。',
  "It installs with your car's seat belt, or on the Pipa Next base using your car's ISOFIX points (the base is sold separately). In store, Meiqi can check it in your own car in twenty minutes.":'可用车辆安全带安装，或通过车上的 ISOFIX 接口装在 Pipa Next 底座上（底座需单独购买）。在门店，美琪可以在二十分钟内帮您在自己的车上检查。','It weighs 3.2 kg, or 2.8 kg without the inserts and canopy.':'重3.2公斤，不含内衬和遮阳篷为2.8公斤。','From birth to 13 kg, for babies 40–83 cm tall. It meets the R129 i-Size standard.':'适用于出生至13公斤、身高40–83厘米的宝宝。符合 R129 i-Size 标准。',"It installs with your car's seat belt, using the green belt guides. It is rearward-facing only.":'使用车辆安全带和绿色导带槽安装。仅可反向安装。','It weighs 3.5 kg.':'重3.5公斤。','From birth to about 15 months: 40–87 cm, up to about 13 kg. It meets R129/03 (i-Size).':'适用于出生至约15个月：身高40–87厘米，体重约13公斤以内。符合 R129/03（i-Size）。',
  "I can't answer health questions, for you or your baby. Please ask your doctor. Meiqi has been told, so she can check in.":'我不能回答健康问题，无论是关于您还是宝宝。请咨询您的医生。我们已告知美琪，她会跟进关心。','motherswork does not recommend infant formula here. For feeding questions, please ask your doctor.':'motherswork 不在这里推荐婴儿配方奶粉。喂养问题请咨询您的医生。','There are no discounts for joining. The price is the same in store, here and on Tmall.':'加入没有折扣。门店、小程序和天猫同价。','Choosing needs a person who knows your family. Tap the button below and Meiqi replies in store hours, with this conversation in front of her.':'怎么选，需要一位了解您家庭的真人来帮忙。点击下方按钮，美琪会在营业时间回复，并能看到这段对话。','Delivery in Shanghai takes about two days. You can also choose delivery near your due date, or collect it in store.':'上海市内配送约需两天。您也可以选择临近预产期送达，或到店自提。','Yes. You can try it at the Shanghai store, with Meiqi. Saturday 10:30 is free.':'可以。您可以到上海店由美琪陪同试用。周六10:30有空。','You can see it at the Shanghai store in opening hours.':'营业时间内可到上海店看实物。','Meiqi replies in store hours. Questions sent in the evening are answered the next morning, by 10:00.':'美琪在营业时间回复。晚上发送的问题会在第二天上午10:00前回复。',"I only answer from motherswork's checked product data, and the sheet doesn't cover that. Tap the button below and Meiqi will pick it up.":'我只根据 motherswork 审核过的商品资料回答，资料里没有这方面的信息。点击下方按钮，美琪会接手。',
  // WeChat, WeCom
@@ -854,6 +861,7 @@ const ZH={'Your adviser':'您的顾问','Due month not used: consent is off':'�
  "Source: product sheet, approved by the buyer ›":"来源：商品资料，买手已审核 ›",
  "How Ask works":"咨询如何运作",
  "✓ Approved by the buyer":"✓ 买手已审核",
+ "✓ Approved by the buyer on 24 Sept 2026":"✓ 买手已于2026年9月24日审核",
  "Price":"价格",
  "same in store, here and on Tmall":"门店、小程序和天猫同价",
  "Steps":"适用阶段",
@@ -918,7 +926,7 @@ const ZHP=[
  [/^(\d+) online orders?, credited to you$/,m=>`${m[1]}个线上订单，已计入您的业绩`],
  [/^‹ Back to (.+)'s WeChat$/,m=>`‹ 返回${T(m[1])}的微信`],[/^NEW MESSAGE FROM (.+)$/,m=>`来自${T(m[1])}的新消息`],
  [/^Order (MW\d+)$/,m=>`订单 ${m[1]}`],[/^Paid (¥[\d,.]+) with WeChat Pay$/,m=>`微信支付 ${m[1]}`],
- [/^We deliver the week of (.+)$/,m=>`将在${T(m[1])}那一周送达`],[/^Week of (.+)$/,m=>`${T(m[1])}那一周`],[/^¥(\d+) to go$/,m=>`还差¥${m[1]}`],
+ [/^We deliver the week of (.+)$/,m=>`将在${T(m[1])}那一周送达`],[/^Week of (.+)$/,m=>`${T(m[1])}那一周`],[/^¥([\d,]+)\.$/,m=>`¥${m[1]}。`],[/^¥(\d+) to go$/,m=>`还差¥${m[1]}`],
  [/^([\d,]+) points: one for every ¥10$/,m=>`${m[1]}积分：每消费¥10得1分`],
  [/^motherswork assistant: (.+)$/,m=>`motherswork 助手：${T(m[1])}`],[/^\[Mini Program\] (.+)$/,m=>`[小程序] ${T(m[1])}`],
  [/^Delivery update for order (.+)$/,m=>`订单 ${m[1]} 的物流通知`],
@@ -1158,12 +1166,12 @@ function featuredHTML(L){
  const picks=state.freq==='pause'?[]:shownPicks(L).filter(id=>P[id]).slice(0,3);
  const FB=['Joolz','Stokke','Nuna','Little Rei','Bugaboo','Cybex','Hegen','Beaba','Pigeon','Hape','Magna Tiles','Avent'].filter(b=>CAT.some(p=>p.b===b));
  let h=`<div class="fbanner" id="fbanner">${slides.map(([bg,t,sub,go,act,pic])=>`<div class="fslide" style="background:${bg}" data-act="${act}"><b>${t}</b>${sub?`<span>${sub}</span>`:''}<span class="go">${go} &#8250;</span>${img(pic)}</div>`).join('')}</div><div class="fdots" id="fdots">${slides.map((x,i)=>`<i style="font-style:normal;color:${i?'#ddd':'#999'}">&#9679;</i>`).join('')}</div>`;
- h+=`<div style="padding:6px 8px 0">${gridHTML()}</div>`;
+ h+=`<div class="pinkzone" style="margin-top:6px">${gridHTML()}</div>`;
  h+=`<div class="fsec"><b>For you</b><span class="lnk" data-act="cat:stage">For my stage &#8250;</span></div>`;
  h+=picks.length?picks.map(id=>`<div class="srow" data-act="product:${id}">${imgHTML(id)}<div class="i"><div class="nm nm2">${esc(P[id].n)}</div><div class="br">${whyFor(id,!state.personal)}</div><div class="bt"><span class="price" style="font-size:15px">${yuan(P[id].p)}</span><span class="plus" data-act="quickadd:${id}">+</span></div></div></div>`).join(''):`<p class="p" style="padding:0 10px">${L.known?'Nothing to buy at this step. Your step has its own guide.':'Add your due month to see what fits your step.'}</p>`;
  h+=`<div class="ftiles"><div data-go="s08"><b>&#128214;</b>Parenting guide<span>Your five steps</span></div><div data-act="circle"><b>&#128101;</b>Mothers' circle<span>Families at your step</span></div><div data-act="cat:Gifts"><b>&#127873;</b>Gift ideas<span>For every milestone</span></div></div>`;
  h+=`<div class="fsec"><b>New arrivals</b><span class="lnk" data-act="cat:new">See all &#8250;</span></div><div class="newrow">${NEWIDS.slice(0,8).map(id=>`<div data-act="product:${id}">${img(id)}<span class="newtag">NEW</span><div class="nm2" style="font-size:11px;line-height:1.3;margin-top:4px">${esc(P[id].n)}</div><div class="price" style="font-size:13px">${yuan(P[id].p)}</div></div>`).join('')}</div>`;
- h+=`<div class="fsec" id="fevents"><b>Live & events</b><span style="font-size:11px;color:#999">Shanghai store</span></div>`+Object.keys(EVENTS).map(k=>{const e=EVENTS[k],b=bookingFor(k);return `<div class="evrow"><div class="evico">${e.i}</div><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:700">${e.n}</div><div style="font-size:11.5px;color:#777">${e.w}</div><div style="font-size:11px;color:#999">${e.d}</div></div>${b?'<span style="font-size:12px;color:var(--teal);font-weight:700" data-act="bookings">Booked ✓</span>':`<a class="btn sm ghostt" style="margin:0" data-act="event:${k}">Book</a>`}</div>`}).join('');
+ h+=`<div class="fsec" id="fevents"><b>Live & events</b><span style="font-size:11px;color:#999">Shanghai store</span></div>`+Object.keys(EVENTS).map(k=>{const e=EVENTS[k],b=bookingFor(k);return `<div class="evrow"><div class="evico">${e.i}</div><div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:700">${e.n}</div><div style="font-size:11.5px;color:#777">${e.w}</div><div style="font-size:11px;color:#999">${e.d}</div></div>${b?'<span style="font-size:12px;color:var(--cara-dark);font-weight:600" data-act="bookings">Booked ✓</span>':`<a class="btn sm ghostt" style="margin:0" data-act="event:${k}">Book</a>`}</div>`}).join('');
  h+=`<div class="fsec"><b>Featured brands</b><span class="lnk" data-act="cat:brands">All brands &#8250;</span></div><div class="chiprow" style="padding:0 10px 4px">${FB.map(b=>`<span class="chip" data-act="brand2:${esc(b)}" data-raw>${esc(b)}</span>`).join('')}</div>`;
  h+=`<div class="fsec"><b>Member benefits</b><span style="font-size:11px;color:#999">${(1240+state.earned).toLocaleString('en-GB')} points</span></div><div class="benefit"><div class="li"><span class="ico">&#11088;</span><span class="k">Points: one for every ¥10, in store and here</span></div><div class="li"><span class="ico">&#128663;</span><span class="k">A free car-seat fitting with your adviser</span></div><div class="li"><span class="ico">&#128666;</span><span class="k">Delivery timed to your due date</span></div><a class="btn sm ghostt" style="margin-top:6px" data-act="memcode">Show member code</a></div>`;
  h+=`<div class="fsec"><b>Our stores</b><span class="lnk" data-act="${state.meiqiAdded?'storecontact':'addmeiqi'}">Contact the store &#8250;</span></div><div class="storecard" data-act="stores"><div class="sclogo">motherswork</div><div class="sctag" data-raw>mother, baby, kids</div><div style="font-size:12px;margin-top:8px">Singapore's one-stop mother and baby store, since 1998</div><div style="font-size:11.5px;color:#bbb;margin-top:3px">7 stores in China. Shanghai: Jing'an Kerry Centre.</div></div>`;
@@ -1197,6 +1205,7 @@ function renderShop(){
  const L=life(),s=state.shop,q=s.q.trim();
  const side=[['featured','Featured'],['stage','For my stage'],['best','Best sellers'],['new','New arrivals'],...CATS.map(c=>[c,c]),['brands','Brands A–Z']];
  $('shopside').parentElement.classList.toggle('full',s.cat==='featured'&&!q);
+ $('shopsbar').classList.toggle('dark',s.cat==='featured');
  $('shopside').innerHTML=side.map(([k,t])=>`<div class="${s.cat===k&&!q?'on':''}" data-act="cat:${k}">${t}</div>`).join('');
  const el=$('shoplist');
  if(s.cat==='featured'&&!q){el.innerHTML=featuredHTML(L)+'<div class="sp"></div>';const fb=$('fbanner');if(fb)fb.addEventListener('scroll',()=>{const i=Math.round(fb.scrollLeft/fb.clientWidth);document.querySelectorAll('#fdots i').forEach((d,j)=>d.style.color=j===i?'#999':'#ddd')},{passive:true});return}
@@ -1255,7 +1264,7 @@ function renderAsk(){
  $('askhead').innerHTML=`<div style="display:flex;gap:8px;align-items:center;font-size:12px;color:#555" data-act="product:${id}">${imgHTML(id).replace('class="pimg','class="pimg" style="width:30px;height:30px;flex:0 0 30px" data-x="')}<span style="flex:0 0 auto;margin-right:4px">About:</span><span class="nm2">${esc(p.n)}</span></div><div style="font-size:14px;font-weight:700;margin:9px 0 7px">Want a person to decide?</div><div style="display:flex;gap:8px"><a class="btn ghostt" style="${bt}" data-act="askmeiqi">Send this to Meiqi</a>`+(p.tr?`<a class="btn teal" style="${bt}" data-act="book:${id}">${id===SEAT?'Book fitting':'Book a try-out'}</a>`:`<a class="btn teal" style="${bt}" data-act="add:${id}">Add to cart</a>`)+`</div><div style="font-size:10.5px;color:#999;margin-top:6px">Only when you tap. Your name and number are not sent to the AI.</div>`;
  let h='<div class="ailine">AI answers from product sheets only. No health advice.</div>';
  h+='<div>'+askChips(id).map((c,i)=>`<span class="chip" data-act="askq:${i}">${c}</span>`).join('')+'</div>';
- h+=log.map(m=>m.w==='me'?`<div class="msg me" style="margin-top:4px">${esc(m.x)}</div>`:m.w==='note'?`<div class="msg ai" style="background:#FFFBF2">${m.x}</div>`:m.w==='typing'?'<div class="msg ai typing">&#8226;&#8226;&#8226;</div>':`<div class="msg ai"><span class="ail">AI-generated</span><br>${esc(m.x)}<div class="src" data-act="sheet:${id}">Source: product sheet, approved by the buyer &#8250;</div><div class="rep" data-act="report">Report this answer</div></div>`).join('');
+ h+=log.map(m=>m.w==='me'?`<div class="msg me" style="margin-top:4px">${esc(m.x)}</div>`:m.w==='note'?`<div class="msg ai" style="background:#FFFBF2">${m.x}</div>`:m.w==='typing'?'<div class="msg ai typing">&#8226;&#8226;&#8226;</div>':`<div class="msg ai"><span class="ail">AI-generated</span><br>${esc(m.x)}<div class="src" data-act="sheet:${m.pid||id}">Source: product sheet, approved by the buyer &#8250;</div><div class="rep" data-act="report">Report this answer</div></div>`).join('');
  h+=moreHTML('more14',`<p class="p" style="font-size:12px">AI assistant (Tencent ADP, Hunyuan model). It answers only from motherswork's checked product sheets, and never on health.</p><p class="p" style="font-size:12px;margin-top:6px">Sends this conversation to Meiqi, your adviser, only when you tap. Your name and phone number are not sent to the AI.</p><p class="p" style="font-size:12px;margin-top:6px">Registered with the Shanghai Cyberspace Administration. The registration number shows here at launch.</p>`,'How Ask works');
  $('asklog').innerHTML=h;
 }
@@ -1308,7 +1317,7 @@ function renderChats(){
  const nn=notifList().length;
  const row=(attr,bg,letter,name,sub,time,red)=>`<div class="chatrow" ${attr}><div class="a" style="background:${bg}">${letter}${red?`<span class="rd">${red}</span>`:''}</div><div class="m"><b>${name}</b><span>${esc(sub)}</span></div><div class="t">${time}</div></div>`;
  $('chats').innerHTML=`<div class="mpdrawer"><div class="lab">Recently used Mini Programs. Pull down in WeChat.</div><div class="apps"><div data-act="openmp:today"><b style="background:var(--red)">m</b>motherswork</div><div data-act="toast:discover"><b>&#128663;</b>Taxi</div><div data-act="toast:discover"><b>&#127860;</b>Food</div></div></div>`
- +row('data-go="s15"','linear-gradient(140deg,#CFE7E2,#8DC4BA)','M','Meiqi <span style="font-size:12px;color:#3C8A5E;font-weight:400">@motherswork</span>',prev,'09:52',1)
+ +row('data-go="s15"','linear-gradient(140deg,#E3C4A3,#B8885C)','M','Meiqi <span style="font-size:12px;color:#3C8A5E;font-weight:400">@motherswork</span>',prev,'09:52',1)
  +row('data-go="s24"','#FA9D3B','&#128276;','Service Notifications',nn?notifList()[0].tt:'No new notifications','09:40',nn)
  +(state.circle?row('data-go="s18"','#9FB3C8','&#128101;',`${esc(circleName(life()))} (${circleSize()})`,(m=>m?(m.sys?m.sys:m.mine?m.x:(m.w==='meiqi'?'Meiqi: ':(m.n||'')+': ')+(m.x||m.card||'')):'')(state.group[state.group.length-1]),'10:05',''):'')
  +row('data-act="toast:sa"','var(--red)','m','motherswork',"This month's guide: weeks 28–36, what to buy and what can wait",'Mon','')
@@ -1330,7 +1339,7 @@ const circleSize=()=>146+(state.circle?1:0);
 function renderCircle(){
  $('circlecount').textContent=`${circleSize()} families, guided by Meiqi`;
  $('circlejoin').innerHTML=state.circle
-  ?`<div style="margin-top:10px;font-size:13px;font-weight:700;color:var(--teal)">&#10003; You're in</div><div style="font-size:11.5px;color:#777">Joined through Meiqi's invitation</div><a class="btn teal" data-go="s18">Open the group chat</a>`
+  ?`<div style="margin-top:10px;font-size:13px;font-weight:600;color:var(--cara-dark)">&#10003; You're in</div><div style="font-size:11.5px;color:#777">Joined through Meiqi's invitation</div><a class="btn teal" data-go="s18">Open the group chat</a>`
   :`<a class="btn teal" data-act="circlejoin">Join through Meiqi</a><div class="row" style="justify-content:center;gap:10px;margin-top:9px" data-act="circlejoin"><div class="qr" style="width:44px;height:44px"></div><span style="font-size:11px;color:#888;width:150px">or long-press the circle's code to join</span></div>`;
 }
 function circleInvite(){
@@ -1394,7 +1403,7 @@ function itemRows(list,editable){
   const p=P[it.id];if(it.when==='due'&&!canDue)it.when='now';
   const opts=[['now','Now'],...(canDue?[['due','Near my due date']]:[]),['store','Collect in store']];
   const o=p.o&&p.o.length?`<div style="font-size:11px;color:#888">${esc(p.o[state.opt[it.id]||0])}</div>`:'';
-  return `<div class="prod">${imgHTML(it.id)}<div class="i"><div class="nm nm2" data-act="product:${it.id}">${esc(p.n)}</div>${o}<div class="row" style="margin-top:4px"><span class="price">${yuan(p.p*it.q)}</span>${editable?`<span class="qty"><span data-act="qty:${i}:-1">&#8722;</span><b>${it.q}</b><span data-act="qty:${i}:1">+</span></span>`:`<span style="font-size:12px;color:#888">× ${it.q}</span>`}</div>${editable?`<div style="font-size:11.5px;color:#555;margin-top:7px"><b>When should it arrive?</b></div><div style="margin-top:5px">${opts.map(([k,t])=>`<span class="chip${it.when===k?' on':''}" style="font-size:11px;padding:4px 8px" data-act="when:${i}:${k}">${t}</span>`).join('')}</div>`:''}<div style="font-size:11px;color:var(--teal)">${whenNote(it,L)}</div></div></div>`;
+  return `<div class="prod">${imgHTML(it.id)}<div class="i"><div class="nm nm2" data-act="product:${it.id}">${esc(p.n)}</div>${o}<div class="row" style="margin-top:4px"><span class="price">${yuan(p.p*it.q)}</span>${editable?`<span class="qty"><span data-act="qty:${i}:-1">&#8722;</span><b>${it.q}</b><span data-act="qty:${i}:1">+</span></span>`:`<span style="font-size:12px;color:#888">× ${it.q}</span>`}</div>${editable?`<div style="font-size:11.5px;color:#555;margin-top:7px"><b>When should it arrive?</b></div><div style="margin-top:5px">${opts.map(([k,t])=>`<span class="chip${it.when===k?' on':''}" style="font-size:11px;padding:4px 8px" data-act="when:${i}:${k}">${t}</span>`).join('')}</div>`:''}<div style="font-size:11px;color:var(--cara-dark)">${whenNote(it,L)}</div></div></div>`;
  }).join('');
 }
 function cartSuggest(){
@@ -1527,11 +1536,13 @@ function fromSheet(q,p){
 }
 function answer(q,p){
  const s=q.toLowerCase(),F=FACTS[p.id]||{},has=(en,zh)=>en.test(s)||zh.test(q);
+ if(!/^jlz-aer2/.test(p.id)&&has(/joolz|\baer ?2?\b|aer²/,/joolz/i)){const a=answer(q,P[STROLLER]);return a.src?{...a,pid:STROLLER}:a}
  if(has(/health|sick|\bill\b|fever|temperature|cough|rash|vomit|diarr|constipat|jaundice|colic|allerg|eczema|medic|doctor|pain|bleed|contraction|vaccin|symptom|nausea|midwife|safe to eat|weight gain|sleep (through|enough)|teething|\bcry|crying|is (this|it|that) normal|normal for|development|growth|breathing|choking|infection|hospital/,/发烧|发热|生病|咳嗽|湿疹|过敏|医生|健康|疼|痛|出牙|哭|正常吗|发育|呼吸|医院|吃药|药|黄疸|吐奶|腹泻|便秘|疫苗|感冒/)) return {x:"I can't answer health questions, for you or your baby. Please ask your doctor. Meiqi has been told, so she can check in."};
  if(has(/formula|milk powder/,/奶粉/)) return {x:'motherswork does not recommend infant formula here. For feeding questions, please ask your doctor.'};
  if(has(/discount|coupon|cheaper|sale\b|deal|promo|voucher/,/折扣|优惠|便宜|打折|券|会员价|促销/)) return {x:'There are no discounts for joining. The price is the same in store, here and on Tmall.',src:1};
  if(has(/\b(which|better|best|should i|recommend|choose|compare|worth|instead)\b|\bvs\b/,/哪个|哪款|哪一个|更好|推荐|怎么选|选哪|比较|值得|还是/)) return {x:'Choosing needs a person who knows your family. Tap the button below and Meiqi replies in store hours, with this conversation in front of her.',hand:1};
  if(has(/price|cost|how much|¥|expensive/,/多少钱|价格|价钱|贵|售价/)) return {x:`It is ¥${p.p.toLocaleString('en-GB')}. Same price in store, here and on Tmall.`,src:1};
+ if(F.age&&has(/\b(child|baby|she|he|toddler|kid|daughter|son)\b[^?.]*\b(heavy|weighs?)\b|\b(heavy|weighs?)\b[^?.]*\b(child|baby|she|he|toddler|kid|daughter|son)\b|max(imum)? weight|weight limit/,/宝宝[^？?。]*(重|公斤)|承重|最大重量|多重的(孩子|宝宝)/)) return {x:F.age,src:1};
  if(F.weight&&has(/heavy|weigh|light/,/多重|重量|重吗|轻|重/)) return {x:F.weight,src:1};
  if(F.age&&has(/\bage\b|until|how long|month|year|outgrow|old|tall|kg/,/多大|年龄|几个月|几岁|用到|多久|身高|公斤|体重/)) return {x:F.age,src:1};
  if(F.fit&&has(/fit|\bcar\b|isofix|hatchback|taxi|install|belt|base/,/装|安装|车|底座|安全带|出租|isofix/i)) return {x:F.fit,src:1};
@@ -1547,7 +1558,7 @@ function ask(q){
  const id=state.product,log=state.ask[id];
  log.push({w:'me',x:q},{w:'typing'});$('askin').value='';
  renderAsk();scrollBottom('s14');
- later(()=>{const a=answer(q,P[id]);log.splice(log.findIndex(m=>m.w==='typing'),1);log.push({w:'ai',x:a.x,src:a.src});state.askPending=a.hand?q:null;if(cur==='s14'){renderAsk();scrollBottom('s14');refresh()}},650);
+ later(()=>{const a=answer(q,P[id]);log.splice(log.findIndex(m=>m.w==='typing'),1);log.push({w:'ai',x:a.x,src:a.src,pid:a.pid});state.askPending=a.hand?q:null;if(cur==='s14'){renderAsk();scrollBottom('s14');refresh()}},650);
 }
 function autoDraft(q){
  const s=q.toLowerCase(),n=nameOr(),has=(en,zh)=>en.test(s)||zh.test(q);let x;
